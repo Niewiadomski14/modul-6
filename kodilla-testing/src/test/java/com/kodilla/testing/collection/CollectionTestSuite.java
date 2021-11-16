@@ -13,20 +13,20 @@ import java.util.ArrayList;
 
 @DisplayName("This is a CollectionTestSuite")
 public class CollectionTestSuite {
-    @Before
-    public void before(){
-        System.out.println("Test Case: start");
+     @BeforeAll
+    public static void beforeAllTest(){
+        System.out.println("start");
     }
-    @After
-    public void after(){
-        System.out.println("Test Case: end");
+    @AfterAll
+    public static void after(){
+        System.out.println("end");
     }
-    @BeforeClass
-    public static void beforeClass() {
+    @BeforeEach
+    public void beforeEveryTest() {
         System.out.println("Test Suite: start");
     }
-    @AfterClass
-    public static void afterClass() {
+    @AfterEach
+    public void afterEveryTest() {
         System.out.println("Test Suite: end");
     }
     @Test
