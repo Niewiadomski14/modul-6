@@ -64,7 +64,7 @@ public class ShapeCollectorTestSuite {
             //when
             Shape figure = o.getFigure(15313);
             //then
-            Assertions.assertEquals(null, figure);
+            Assertions.assertNull(figure);
         }
     }
     @Nested
@@ -78,6 +78,7 @@ public class ShapeCollectorTestSuite {
             o.addFigure(circle);
             //then
             Assertions.assertEquals(1,o.shapesListSize());
+            //System.out.println(o.showFigure());
         }
 
     }
