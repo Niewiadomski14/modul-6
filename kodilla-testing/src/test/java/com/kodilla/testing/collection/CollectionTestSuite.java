@@ -1,19 +1,14 @@
 package com.kodilla.testing.collection;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+
+import org.junit.jupiter.api.*;
 
 
 import java.util.ArrayList;
 
 @DisplayName("This is a CollectionTestSuite")
 public class CollectionTestSuite {
-     @BeforeAll
+    @BeforeAll
     public static void beforeAllTest(){
         System.out.println("start");
     }
@@ -58,8 +53,6 @@ public class CollectionTestSuite {
         //When
         result = (ArrayList<Integer>) oddNumbersExterminatorFull.exterminate(fullNumbers);
         //Then
-        System.out.println("Testing " + result.get(0));
-        System.out.println("Testing " + result.get(1));
-        System.out.println("Testing " + result.get(2));
+        Assertions.assertEquals(4, result.size());
     }
 }
