@@ -95,7 +95,7 @@ class ShapeCollector{
         return figure;
     }
 
-    public ArrayList<String> showFigures() {
+    public ArrayList<String> showFigure() {
         ArrayList<String> showList = new ArrayList<String>();
         for (Shape currentShape : shapeList) {
             String currentShowFigure = (currentShape.getShapeName() + " " + currentShape.getField());
