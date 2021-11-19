@@ -63,7 +63,7 @@ class WeatherForecastTestSuite {
 
     }
 
-    @Test
+        @Test
     void testCalculateMedian(){
         //Given
         Map<String, Double> medianMap = new HashMap<>();
@@ -72,12 +72,13 @@ class WeatherForecastTestSuite {
         medianMap.put("Wroclaw", 24.8);
         medianMap.put("Warszawa", 25.2);
         medianMap.put("Gdansk", 26.1);
+        medianMap.put("Warszawa", 25.2);
         WeatherForecast weatherForecast = new WeatherForecast(temperaturesMock);
         when(temperaturesMock.getTemperatures()).thenReturn(medianMap);
         //When
         Double b = weatherForecast.calculateMedian();
         //Then
-        Assertions.assertEquals(26.1,b);
+        Assertions.assertEquals(25.8,b);
     }
 
 
