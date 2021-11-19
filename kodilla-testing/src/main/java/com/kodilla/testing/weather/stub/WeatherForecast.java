@@ -46,7 +46,7 @@ public class WeatherForecast {
 
     }
 
-    public Double calculateMedian() {
+     public Double calculateMedian() {
         Map<String, Double> medianMaps = new HashMap<>();
 
         for (Map.Entry<String, Double> temperature :
@@ -54,17 +54,19 @@ public class WeatherForecast {
             medianMaps.put(temperature.getKey(), temperature.getValue());
         }
         Double median = 0.0;
-        int n = 5;
+        int n = 6;
         for (Double e : medianMaps.values()) {
            Object[] objectArray = medianMaps.values().toArray();
            Arrays.sort(objectArray);
-
-           median = (Double) objectArray[(n+1)/2];
-
+            if(n%2==1) {
+                median = (Double) objectArray[(n + 1) / 2];
+            }else
+            {
+                median = ((Double)objectArray[n/2-1] + (Double)objectArray[n/2])/2;
+            }
         }
         return median;
     }
-
 
 
 
