@@ -54,8 +54,8 @@ public class WeatherForecast {
             medianMaps.put(temperature.getKey(), temperature.getValue());
         }
         Double median = 0.0;
-        int n = 6;
-        for (Double e : medianMaps.values()) {
+        int n = medianMaps.size();
+
            Object[] objectArray = medianMaps.values().toArray();
            Arrays.sort(objectArray);
             if(n%2==1) {
@@ -64,7 +64,7 @@ public class WeatherForecast {
             {
                 median = ((Double)objectArray[n/2-1] + (Double)objectArray[n/2])/2;
             }
-        }
+
         return median;
     }
 
