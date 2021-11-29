@@ -135,7 +135,7 @@ class BookDirectoryTestSuite {
         List<Book> bookInHandsOf5 = bookLibrary.listBooksInHandsOf(libraryUser);
 
         // Then
-        assertEquals(5,bookInHandsOf5.size());
+        assertEquals(5,bookInHandsOf5.size()); 
     }
 
 }
