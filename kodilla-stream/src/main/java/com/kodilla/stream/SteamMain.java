@@ -19,7 +19,7 @@ import java.util.stream.Collectors;
 class StreamMain {
 
     public static void main(String[] args) {
-        //Task 7.2
+        //Task 7.1
        /* PoemBeautifier poemBeautifier = new PoemBeautifier();
         String a = poemBeautifier.beautify("bartek", beautify -> (beautify.toUpperCase()));
         System.out.println(a);
