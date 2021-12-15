@@ -15,4 +15,10 @@ public final class World {
         return continentList;
     }
 
+    public BigDecimal getPeopleQuantity() {
+        return continentList.stream()
+                .flatMap(countries -> countries.getContinents().stream())
+                .map(Country::getPeopleQuantity)
+                .reduce(BigDecimal.ZERO, BigDecimal::add);
+    }
 }

@@ -59,13 +59,10 @@ public class WorldTestSuite {
         world.addContinent(northAmerica);
 
         //WHEN
-        BigDecimal totalPeople = (BigDecimal) world.getContinentList().stream()
-                .flatMap(continent -> continent.getContinents().stream())
-                .map(Country::getPeopleQuantity)
-                .reduce(BigDecimal.ZERO,(sum,current) -> sum.add(current));
+        BigDecimal quantity = world.getPeopleQuantity();
 
         //Then
         BigDecimal peopleOnTheWorld = new BigDecimal("706053168");
-        Assert.assertEquals(peopleOnTheWorld,totalPeople);
+        Assert.assertEquals(peopleOnTheWorld,quantity);
     }
 }
